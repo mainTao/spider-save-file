@@ -1,5 +1,5 @@
 {
-  "name": "spider-download",
+  "name": "spider-save-file",
   "version": "1.0.0",
   "description": "Best for downloading files in spider, such as Puppeteer.",
   "main": "index.js",

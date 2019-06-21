@@ -1,0 +1,25 @@
+{
+  "name": "spider-download",
+  "version": "1.0.0",
+  "description": "Best for downloading files in spider, such as Puppeteer.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mainTao/spider-download.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mainTao/spider-download/issues"
+  },
+  "homepage": "https://github.com/mainTao/spider-download#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}

@@ -1,0 +1,1 @@
+Best for downloading files in spider, such as Puppeteer.

@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mainTao/spider-download.git"
+    "url": "git+https://github.com/mainTao/spider-save-file.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mainTao/spider-download/issues"
+    "url": "https://github.com/mainTao/spider-save-file/issues"
   },
-  "homepage": "https://github.com/mainTao/spider-download#readme",
+  "homepage": "https://github.com/mainTao/spider-save-file#readme",
   "devDependencies": {
     "mocha": "^6.1.4"
   }

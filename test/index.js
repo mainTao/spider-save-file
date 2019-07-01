@@ -88,10 +88,10 @@ describe('basename', function () {
         downloadPath,
       })
       assert(file.fileName === 'liulishuo-pre.mp4')
-      assert(file.contentLength > 0)
+      assert(file.totalBytes > 0)
   })
 
   afterEach(async () => {
-    // clearDownloadPath()
+    clearDownloadPath()
   })
 })

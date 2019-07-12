@@ -40,7 +40,7 @@ async function availableFilePath(downloadPath, fileName) {
 
 async function downloadFile({
   url,
-  options, // http.get options
+  options, // http.request options
   downloadPath,
   fileName,
   onProgress,
@@ -48,19 +48,24 @@ async function downloadFile({
 }) {
   return new Promise((resolve, reject) => {
     let startTime = new Date
-    let client = url.startsWith('https://') ? https : http
+
+    let urlObj = urlUtil.parse(url)
+    let client = urlObj.protocol === 'https:' ? https : http
+    let optionObj = {
+      ...urlObj,
+      ...options
+    }
+
     if (!downloadPath) {
       downloadPath = '.' // 未指定则下载到当前目录
     }
-    if (!options) {
-      options = {}
-    }
-    const request = client.request(url, options, async function (response) {
+
+    const request = client.request(optionObj, async function (response) {
       if ([301, 302, 307].includes(response.statusCode)) {
         url = response.headers['location']
         resolve(downloadFile({
           url,
-          options,
+          options, // 原 options
           downloadPath,
           fileName,
           onProgress,

@@ -68,6 +68,8 @@ describe('redirect', function () {
 describe('content-disposition', function () {
 
   it('mp4', async function () {
+    this.timeout(10000);
+
     let file = await downloadFile({
       url: 'https://uskid.oss-cn-beijing.aliyuncs.com/temp/liulishuo-result.mp4',
       downloadPath,
@@ -83,12 +85,13 @@ describe('content-disposition', function () {
 describe('basename', function () {
 
   it('mp4', async function () {
-      let file = await downloadFile({
-        url: 'https://uskid.oss-cn-beijing.aliyuncs.com/temp/liulishuo-pre',
-        downloadPath,
-      })
-      assert(file.fileName === 'liulishuo-pre.mp4')
-      assert(file.totalBytes > 0)
+    this.timeout(10000);
+    let file = await downloadFile({
+      url: 'https://uskid.oss-cn-beijing.aliyuncs.com/temp/liulishuo-pre',
+      downloadPath,
+    })
+    assert(file.fileName === 'liulishuo-pre.mp4')
+    assert(file.totalBytes > 0)
   })
 
   afterEach(async () => {

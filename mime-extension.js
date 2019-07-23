@@ -245,7 +245,9 @@
    "video/mpeg": ["mpeg", "mpg", "mpe", "m1v", "m2v"],
    "video/ogg": ["ogv"],
    "video/quicktime": ["qt", "mov"],
-   "video/webm": ["webm"]
+   "video/webm": ["webm"],
+   "application/vnd.apple.mpegurl": ["m3u8"],
+   "application/x-mpegurl": ["m3u8"],
  }
 
  /**
